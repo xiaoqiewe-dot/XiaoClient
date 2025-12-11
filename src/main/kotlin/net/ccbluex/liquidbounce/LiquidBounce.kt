@@ -398,8 +398,10 @@ object LiquidBounce : EventListener {
             logger.info("Client Branch: $clientBranch")
             logger.info("Operating System: ${System.getProperty("os.name")} (${System.getProperty("os.version")})")
             logger.info("Java Version: ${System.getProperty("java.version")}")
-            logger.info("Screen Resolution: ${mc.window.width}x${mc.window.height}")
-            logger.info("Refresh Rate: ${mc.window.refreshRate} Hz")
+            mc.window?.let { window ->
+                logger.info("Screen Resolution: ${window.width}x${window.height}")
+                logger.info("Refresh Rate: ${window.refreshRate} Hz")
+            }
 
             // Initialize event manager
             EventManager
