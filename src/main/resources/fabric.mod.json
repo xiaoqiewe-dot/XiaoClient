@@ -19,10 +19,7 @@
   "environment": "client",
   "entrypoints": {
     "client": [
-      {
-        "adapter": "kotlin",
-        "value": "net.ccbluex.liquidbounce.LiquidBounceInitializer"
-      }
+      "net.ccbluex.liquidbounce.LiquidBounceInitializer"
     ]
   },
   "custom": {
