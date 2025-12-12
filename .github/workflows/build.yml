@@ -74,6 +74,9 @@ jobs:
 
   verify-pr:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      security-events: write
     steps:
       - name: Checkout repository and submodules
         uses: actions/checkout@v3
